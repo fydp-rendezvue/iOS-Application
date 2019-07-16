@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7486FDD3A4ED26E36121AB9B /* Pods_fydp_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05EF1869338CF30CFA6362F4 /* Pods_fydp_test.framework */; };
 		E0AC7C9122DCF009008703D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC7C9022DCF009008703D7 /* AppDelegate.swift */; };
 		E0AC7C9322DCF009008703D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC7C9222DCF009008703D7 /* ViewController.swift */; };
 		E0AC7C9622DCF009008703D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AC7C9422DCF009008703D7 /* Main.storyboard */; };
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05EF1869338CF30CFA6362F4 /* Pods_fydp_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fydp_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B723587E87E76C60FF1DD76 /* Pods-fydp-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fydp-test.release.xcconfig"; path = "Target Support Files/Pods-fydp-test/Pods-fydp-test.release.xcconfig"; sourceTree = "<group>"; };
+		741A17B578F7679036575825 /* Pods-fydp-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fydp-test.debug.xcconfig"; path = "Target Support Files/Pods-fydp-test/Pods-fydp-test.debug.xcconfig"; sourceTree = "<group>"; };
 		E0AC7C8D22DCF009008703D7 /* fydp-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fydp-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AC7C9022DCF009008703D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0AC7C9222DCF009008703D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7486FDD3A4ED26E36121AB9B /* Pods_fydp_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F7A30FD1EC9DE107DEBBCA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				741A17B578F7679036575825 /* Pods-fydp-test.debug.xcconfig */,
+				4B723587E87E76C60FF1DD76 /* Pods-fydp-test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D6B4E701638F0D80F59F4436 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05EF1869338CF30CFA6362F4 /* Pods_fydp_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E0AC7C8422DCF009008703D7 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				E0AC7CA422DCF00A008703D7 /* fydp-testTests */,
 				E0AC7CAF22DCF00A008703D7 /* fydp-testUITests */,
 				E0AC7C8E22DCF009008703D7 /* Products */,
+				0F7A30FD1EC9DE107DEBBCA9 /* Pods */,
+				D6B4E701638F0D80F59F4436 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0AC7CB522DCF00A008703D7 /* Build configuration list for PBXNativeTarget "fydp-test" */;
 			buildPhases = (
+				F072632F91BCE53BADABC2B2 /* [CP] Check Pods Manifest.lock */,
 				E0AC7C8922DCF009008703D7 /* Sources */,
 				E0AC7C8A22DCF009008703D7 /* Frameworks */,
 				E0AC7C8B22DCF009008703D7 /* Resources */,
+				33F83B2846AE9C6D20D7B9B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +276,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33F83B2846AE9C6D20D7B9B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fydp-test/Pods-fydp-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fydp-test/Pods-fydp-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fydp-test/Pods-fydp-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F072632F91BCE53BADABC2B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fydp-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E0AC7C8922DCF009008703D7 /* Sources */ = {
@@ -430,9 +498,11 @@
 		};
 		E0AC7CB622DCF00A008703D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 741A17B578F7679036575825 /* Pods-fydp-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6394Z43BWA;
 				INFOPLIST_FILE = "fydp-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,9 +517,11 @@
 		};
 		E0AC7CB722DCF00A008703D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B723587E87E76C60FF1DD76 /* Pods-fydp-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6394Z43BWA;
 				INFOPLIST_FILE = "fydp-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
