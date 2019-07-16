@@ -49,6 +49,38 @@ class ViewController: UIViewController {
         // annotationNode.scalingScheme = .normal
         sceneLocationView.addLocationNodeForCurrentPosition(locationNode: annotationNode)
 
+        let urlString = "https://a646ae19.ngrok.io/users/1/rooms/1/marker"
+        let url = URL(string: urlString)
+        var request = URLRequest(url: url!)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        let parameters: [String: Double] = [
+            "longitude": sceneLocationView.sceneLocationManager.currentLocation?.coordinate.longitude ?? 0.0,
+            "latitude": sceneLocationView.sceneLocationManager.currentLocation?.coordinate.latitude ?? 0.0
+        ]
+        guard let httpBody = try? JSONSerialization.data(withJSONObject:  parameters, options: []) else { return }
+        request.httpBody = httpBody
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data,
+                let response = response as? HTTPURLResponse,
+                error == nil else {                                              // check for fundamental networking error
+                    print("error", error ?? "Unknown error")
+                    return
+            }
+            
+            guard (200 ... 299) ~= response.statusCode else {                    // check for http errors
+                print("statusCode should be 2xx, but is \(response.statusCode)")
+                print("response = \(response)")
+                return
+            }
+            
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(responseString)")
+        }
+        
+        task.resume()
+        
     }
     
     func addSceneModels() {
